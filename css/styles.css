@@ -1,0 +1,97 @@
+/*
+  Yellow #FAEE36
+  Black #0A0901
+  Cyan #4FCFFB
+  Red #8F1130
+
+  Yellow-background #FCFAE5
+*/
+
+* {
+ box-sizing: border-box;
+}
+
+body {
+  background: #ECF6F9;
+  font-size: 16px;
+}
+
+p, lable {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
+  color: #211e03;
+  line-height: 1.8em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: #0A0901;
+}
+
+h1 {
+  font-size: 1.926em;
+}
+
+h2 {
+ font-size: 1.5em;
+}
+
+
+
+/* ========== HEADER SECTION ========== */
+header {
+  text-align: center;
+}
+.header-top-banner {
+  display: inline-block;
+  width: 100%;
+  height: 80px;
+  background: #0A0901;
+  text-transform: uppercase;
+}
+
+.header-top-banner h1 {
+  color: #ECF6F9;
+}
+
+.header-intro {
+  width: 95%;
+  margin: 40px auto;
+}
+
+.border-thick,
+.border-thin {
+  width: 95%;
+  margin: 0 auto;
+}
+.border-thick {
+  border-bottom: 4px solid #0A0901;
+}
+
+.border-thin {
+  margin-top: 4px;
+  border-bottom: 2px solid #0A0901;
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 6.854em;
+  }
+
+  h2 {
+   font-size: 4.236em;
+  }
+
+  h3 {
+    font-size: 2.618em;
+  }
+
+  h4 {
+    font-size: 1.618em;
+  }
+}
