@@ -16,9 +16,9 @@ body {
   font-size: 16px;
 }
 
-p, lable {
+p, label {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.85em;
+  font-size: 0.85rem;
   color: #211e03;
   line-height: 1.8em;
 }
@@ -72,6 +72,71 @@ header {
 .border-thin {
   margin-top: 4px;
   border-bottom: 2px solid #0A0901;
+}
+
+/* ========== CONTACT INFORMATION ========== */
+.review-input {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+fieldset {
+  padding: 30px;
+  margin: 0 10px;
+  border-radius: 3px;
+  border: 0;
+  background: #4FCFFB;
+  max-width: 450px;
+}
+
+label,
+input,
+select,
+textarea {
+  display: block;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  outline: none;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  height: 40px;
+  max-width: 100%;
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0px 0px 4px 3px #B23554;
+}
+
+input[id="name"]:focus {
+  content: "";
+}
+
+input[value^="Required"] {
+  font-style: italic;
+  background: #fcf481;
+  color: gray;
+}
+
+textarea {
+  height: 150px;
 }
 
 @media screen and (min-width: 768px) {
