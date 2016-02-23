@@ -80,9 +80,13 @@ header {
   margin: 0 auto;
 }
 
+.review-input h2 {
+  text-align: center;
+}
+
 fieldset {
   padding: 30px;
-  margin: 0 10px;
+  margin: 0 10px 1em;
   border-radius: 3px;
   border: 0;
   background: #4FCFFB;
@@ -108,7 +112,7 @@ label {
 
 input, select, textarea {
   height: 40px;
-  max-width: 100%;
+  width: 100%;
   border-radius: 5px;
   border: 0px;
   margin-bottom: 20px;
@@ -129,15 +133,50 @@ input[id="name"]:focus {
   content: "";
 }
 
-input[value^="Required"] {
+input[value="Required"] {
   font-style: italic;
   background: #fcf481;
   color: gray;
 }
 
+option:first-child {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
 textarea {
   height: 150px;
 }
+
+.newsletter {
+  text-align: center;
+  padding: 2px 5px;
+  margin-bottom: 20px;
+  background: #c2eefe;
+  border-radius: 5px;
+}
+
+.newsletter:last-of-type {
+  margin-top: 40px;
+}
+
+.newsletter-input,
+.newsletter-label {
+  display: inline-block;
+}
+
+.newsletter-input {
+  width: 20px;
+  margin-bottom: 0;
+}
+
+.newsletter-label {
+  vertical-align: top;
+  margin-top: 8px;
+}
+
+
+
 
 @media screen and (min-width: 768px) {
   p {

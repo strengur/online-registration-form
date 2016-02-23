@@ -51,7 +51,7 @@
 				<label for="city">City</label>
 				<input type="text" id="city" name="senders_city">
 
-				<label for="state">State</label>
+				<label class="label-state" for="state">State</label>
 					<select id="state" name="state">
 						<option value="blank_option" selected hidden></option>
 						<option value="capital_area">Capital Area</option>
@@ -68,6 +68,37 @@
 
 				<label for="comment">Comments</label>
 				<textarea id="comment" name="comments"></textarea>
+			</fieldset>
+
+			<fieldset>
+				<label class="label-project" for="project">Project For Review</label>
+					<select id="project" name="project">
+						<option>Choose Project</option>
+						<option value="responsive_layout">Responsive Layout</option>
+						<option value="portfolio">Portfolio</option>
+						<option value="review-form">Review From</option>
+					</select>
+			</fieldset>
+
+				<h2>Newsletter</h2>
+			<fieldset>
+				<div class="newsletter">
+					<p>Select the newsletter you would like to recieve.</p>
+				</div>
+				<input class="newsletter-input" type="checkbox" id="html-news-checkbox" value="html_news" name="html-news-checkbox">
+				<label class="newsletter-label" for="html-news-checkbox">HTML News</label><br>
+				<input class="newsletter-input" type="checkbox" id="css-news-checkbox" value="css_news" name="css-news-checkbox">
+				<label class="newsletter-label" for="css-news-checkbox">CSS News</label><br>
+				<input class="newsletter-input" type="checkbox" id="js-news-checkbox" value="js_news" name="js-news-checkbox">
+				<label class="newsletter-label" for="js-news-checkbox">JavaScript News</label>
+
+				<div class="newsletter">
+					<p>Newsletter format you prefer.</p>
+				</div>
+				<input class="newsletter-input" type="radio" id="html-format" value="html_format" name="news-format" checked="true">
+				<label class="newsletter-label" for="html-format">HTML</label><br>
+				<input class="newsletter-input" type="radio" id="text-format" value="css_format" name="news-format">
+				<label class="newsletter-label" for="text-format">Plain Text</label><br>
 			</fieldset>
 
 			<button type="submit">Sign Up</button>
