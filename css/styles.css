@@ -18,7 +18,7 @@ body {
 
 p, label {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.85em;
   color: #211e03;
   line-height: 1.8em;
 }
@@ -133,10 +133,10 @@ input[id="name"]:focus {
   content: "";
 }
 
-input[value="Required"] {
-  font-style: italic;
-  background: #fcf481;
-  color: gray;
+.required:after {
+  content: ' *';
+  display:inline;
+  color: #e32;
 }
 
 option:first-child {
@@ -175,8 +175,30 @@ textarea {
   margin-top: 8px;
 }
 
+label[for="topics"] {
+  margin-top: 20px;
+}
 
+/* ========== SUBMIT BUTTON ========== */
 
+button {
+  display: block;
+  width: 95%;
+  margin: 40px auto;
+  padding: 20px;
+  background: #B23554;
+  color: #ECF6F9;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* ========== FOOTER ========== */
+footer p {
+  font-size: .75em;
+  font-style: italic;
+  text-align: center;
+}
 
 @media screen and (min-width: 768px) {
   p {
