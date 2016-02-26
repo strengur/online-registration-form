@@ -39,7 +39,7 @@ h2 {
 
 
 
-/* ========== HEADER SECTION ========== */
+/* ========== HEADER SECTION (mobile) ========== */
 header {
   text-align: center;
 }
@@ -74,14 +74,20 @@ header {
   border-bottom: 2px solid #0A0901;
 }
 
-/* ========== CONTACT INFORMATION ========== */
+/* ========== CONTACT INFORMATION (mobile) ========== */
 .review-input {
-  max-width: 450px;
   margin: 0 auto;
 }
 
 .review-input h2 {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.review-input,
+fieldset {
+  max-width: 450px;
 }
 
 fieldset {
@@ -90,7 +96,12 @@ fieldset {
   border-radius: 3px;
   border: 0;
   background: #4FCFFB;
-  max-width: 450px;
+}
+
+legend {
+  position: relative;
+  top: -10px;
+  font-style: italic;
 }
 
 label,
@@ -129,8 +140,12 @@ select:focus {
   box-shadow: 0px 0px 4px 3px #B23554;
 }
 
-input[id="name"]:focus {
-  content: "";
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
+  text-align: right;
+  font-style: italic;
+  padding-right: 10px;
 }
 
 .required:after {
@@ -179,7 +194,7 @@ label[for="topics"] {
   margin-top: 20px;
 }
 
-/* ========== SUBMIT BUTTON ========== */
+/* ========== SUBMIT BUTTON (mobile) ========== */
 
 button {
   display: block;
@@ -193,7 +208,7 @@ button {
   cursor: pointer;
 }
 
-/* ========== FOOTER ========== */
+/* ========== FOOTER (mobile) ========== */
 footer p {
   font-size: .75em;
   font-style: italic;
@@ -210,7 +225,7 @@ footer p {
   }
 
   h2 {
-   font-size: 4.236em;
+   font-size: 2.236em;
   }
 
   h3 {
@@ -219,5 +234,60 @@ footer p {
 
   h4 {
     font-size: 1.618em;
+  }
+
+/* ========== HEADER SECTION (display)========== */
+  .header-top-banner h1 {
+    font-size: 1.926em;
+  }
+
+  .header-intro h2 {
+    font-size: 3.236em;
+    margin-bottom: 0;
+  }
+
+  /* ========== CONTACT INFORMATION (mobile) ========== */
+  label {
+    width: 150px;
+  }
+
+  input,
+  select {
+    max-width: 415px;
+    margin-left: 40px;
+  }
+
+  label,
+  input,
+  textarea,
+  select {
+    display: inline-block;
+  }
+
+  input#zip {
+    width: 126px;
+    margin-right: 136px;
+  }
+
+  .review-input,
+  fieldset {
+    max-width: 690px;
+  }
+
+  .review-input h2 {
+    margin-left: 39px;
+    text-align: left;
+  }
+
+  label[for="topics"] {
+    width: 240px;
+  }
+
+  select#project {
+    margin-top: 20px;
+  }
+
+  button {
+    width: 97%;
   }
 }
