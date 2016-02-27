@@ -195,7 +195,7 @@ input:focus + .help {
   background: #FAEE36;
 }
 
-input[type="email"]::-webkit-input-placeholder {
+::-webkit-input-placeholder {
   text-align: right;
   font-style: italic;
   padding-right: 10px;
