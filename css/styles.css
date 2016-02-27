@@ -4,7 +4,9 @@
   Cyan #4FCFFB
   Red #8F1130
 
-  Yellow-background #FCFAE5
+  Yellow-background #F8F3C2
+  Box-shadow-glow #B23554
+  Invalid-email #D1637E
 */
 
 * {
@@ -74,6 +76,11 @@ header {
   border-bottom: 2px solid #0A0901;
 }
 
+/* ========== WRAPPER (mobile / display) ========== */
+.wrap {
+  min-height: calc(100vh - 22px);
+}
+
 /* ========== CONTACT INFORMATION (mobile) ========== */
 .review-input {
   margin: 0 auto;
@@ -86,11 +93,13 @@ header {
 }
 
 .review-input,
-fieldset {
+fieldset,
+.thank-you-section {
   max-width: 450px;
 }
 
 fieldset {
+  position: relative;
   padding: 30px;
   margin: 0 10px 1em;
   border-radius: 3px;
@@ -101,7 +110,17 @@ fieldset {
 legend {
   position: relative;
   top: -10px;
+  font-size: .85em;
   font-style: italic;
+  color: #666666;
+}
+
+.fieldset-icons {
+  position: absolute;
+  right: 20px;
+  top: -45px;
+  transition: .7s;
+  z-index: -1;
 }
 
 label,
@@ -115,13 +134,32 @@ input:focus,
 textarea:focus,
 select:focus{
   outline: none;
+  box-shadow: 0px 0px 4px 3px #B23554;
 }
+
+input:focus,
+textarea:focus {
+  background: #F8F3C2;
+  transition: .5s;
+}
+
+input,
+textarea {
+  transition: .5s;
+}
+
 
 label {
   margin-bottom: 5px;
 }
 
-input, select, textarea {
+input {
+  padding-left: 10px;
+}
+
+input,
+textarea,
+select {
   height: 40px;
   width: 100%;
   border-radius: 5px;
@@ -134,15 +172,42 @@ textarea {
   width: 100%;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  box-shadow: 0px 0px 4px 3px #B23554;
+input[type="email"]:invalid {
+  background-color: #D1637E;
+  color: white;
 }
 
-input::-webkit-input-placeholder,
-input::-moz-placeholder,
-input:-ms-input-placeholder {
+.help {
+    display:none;
+    font-size:.75em;
+    font-style: italic;
+    color: #666666;
+    margin-top: -15px;
+    text-align: right;
+}
+
+input:focus + .help {
+    display: block;
+    transition: 1s;
+}
+
+:placeholder-shown {
+  background: #FAEE36;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+  text-align: right;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+::-moz-placeholder {
+  text-align: right;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+:-ms-input-placeholder {
   text-align: right;
   font-style: italic;
   padding-right: 10px;
@@ -194,7 +259,7 @@ label[for="topics"] {
   margin-top: 20px;
 }
 
-/* ========== SUBMIT BUTTON (mobile) ========== */
+/* ========== SUBMIT BUTTON (mobile / display) ========== */
 
 button {
   display: block;
@@ -208,7 +273,26 @@ button {
   cursor: pointer;
 }
 
-/* ========== FOOTER (mobile) ========== */
+/* ========== THANK YOU (mobile / display) ========== */
+.thank-you-section {
+  position: relative;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.thank-you-section img {
+  position: relative;
+  display: inline-block;
+  margin-top: 2em;
+  margin-right: 1em;
+}
+
+.thank-you-section img:last-child {
+  margin-right: 0;
+}
+
+
+/* ========== FOOTER (mobile / display) ========== */
 footer p {
   font-size: .75em;
   font-style: italic;
@@ -272,6 +356,15 @@ footer p {
   .review-input,
   fieldset {
     max-width: 690px;
+  }
+
+  legend {
+    font-size: 1em;
+  }
+
+  .fieldset-icons {
+    right: -35px;
+    top: -35px;
   }
 
   .review-input h2 {

@@ -32,12 +32,14 @@
 			<h2>Contact Information</h2>
 
 			<fieldset>
-				<legend>Please fill out the form and select project</legend>
+				<legend>Please fill out the form</legend>
+				<img class="fieldset-icons" src="assets/icons/business.svg" alt="Business Icon">
 				<label class="required" for="name">Full Name</label>
 				<input type="text" id="name" name="full_name" placeholder="Required" required>
 
 				<label class="required" for="mail">Email Address</label>
-				<input type="email" id="mail" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" name="senders_email" placeholder="Required" required>
+				<input type="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-describedby="email-format" name="senders_email" placeholder="Required" required>
+				<span id="email-format" class="help">Format: email@yourhost.com</span>
 
 				<label for="phone">Phone Number</label>
 				<input type="tel" id="phone" name="senders_phone">
@@ -64,8 +66,10 @@
 				<label for="comment">Comments</label>
 				<textarea id="comment" name="comments"></textarea>
 			</fieldset>
-
+			<h2>Project</h2>
 			<fieldset>
+				<legend>Please select project for review</legend>
+				<img class="fieldset-icons" src="assets/icons/projects.svg" alt="Projects Icon">
 				<label class="label-project" for="project">Project For Review</label>
 					<select id="project" name="project">
 						<option>- Choose Project -</option>
@@ -75,9 +79,10 @@
 					</select>
 			</fieldset>
 
-				<h2>Newsletter</h2>
+			<h2>Newsletter</h2>
 			<fieldset>
 				<legend>Please select what you prefer</legend>
+				<img class="fieldset-icons" src="assets/icons/newsletter.svg" alt="Newsletter Icon">
 				<div class="newsletter">
 					<p>Select the newsletter you would like to recieve.</p>
 				</div>
